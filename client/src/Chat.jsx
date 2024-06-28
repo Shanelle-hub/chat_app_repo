@@ -20,7 +20,7 @@ function Chat() {
     connectToWs();
   }, []);
   function connectToWs() {
-    const ws = new WebSocket("ws://localhost:4000");
+    const ws = new WebSocket("https://chat-app-repo-api.vercel.app");
     setWs(ws);
     ws.addEventListener("message", handleMessage);
     ws.addEventListener("close", () => {
@@ -227,7 +227,8 @@ function Chat() {
                               />
                             </svg>
                             <img
-                              src={`http://localhost:4000/uploads/${message.file}`} className="w-30 h-30"
+                              src={`https://chat-app-repo-api.vercel.app/uploads/${message.file}`}
+                              className="max-w-full h-auto"
                             />
                           </a>
                         </div>

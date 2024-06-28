@@ -3,7 +3,7 @@ import axios from 'axios'
 import {UserContextProvider} from './UserContext'
 
 function App() {
-  axios.defaults.baseURL= 'http://localhost:4000'
+  axios.defaults.baseURL = "https://chat-app-repo-api.vercel.app"
   axios.defaults.withCredentials = true
   return (
     <>
